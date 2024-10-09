@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:tnsc9d9="http://services.sapo.pt/Metadata/Holiday" elementFormDefault="qualified" targetNamespace="http://services.sapo.pt/Metadata/Holiday" xmlns="http://www.w3.org/2001/XMLSchema">
+  <complexType name="ArrayOfHoliday">
+    <sequence>
+      <element minOccurs="0" maxOccurs="unbounded" name="Holiday" nillable="true" type="tnsc9d9:Holiday">
+        <annotation>
+          <documentation xml:lang="en">An array of Holiday.</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="Holiday">
+    <sequence>
+      <element minOccurs="0" name="Name" nillable="true" type="string">
+        <annotation>
+          <documentation xml:lang="en">The holiday name.</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="Date" type="dateTime">
+        <annotation>
+          <documentation xml:lang="en">The holiday date.</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="Description" nillable="true" type="string">
+        <annotation>
+          <documentation xml:lang="en">The holiday description.</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="Type" type="tnsc9d9:HolidayType">
+        <annotation>
+          <documentation xml:lang="en">The holiday type.</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="Municipality" nillable="true" type="tnsc9d9:Municipality">
+        <annotation>
+          <documentation xml:lang="en">The holiday municipality.</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <simpleType name="HolidayType">
+    <restriction base="string">
+      <enumeration value="National">
+        <annotation>
+          <documentation xml:lang="en">Indicates that the holiday is national.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="Municipal">
+        <annotation>
+          <documentation xml:lang="en">Indicates that the holiday is only at a municipal level.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="Regional">
+        <annotation>
+          <documentation xml:lang="en">Indicates that the holiday is only at a regional level.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="Religious">
+        <annotation>
+          <documentation xml:lang="en">Indicates that the holiday is religious.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="Optional">
+        <annotation>
+          <documentation xml:lang="en">Indicates that the holiday is optional.</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <complexType name="Municipality">
+    <sequence>
+      <element minOccurs="0" name="Id" nillable="true" type="string">
+        <annotation>
+          <documentation xml:lang="en">The municipality identifier according do SAPO GIS Service.</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="Name" nillable="true" type="string">
+        <annotation>
+          <documentation xml:lang="en">The municipality name.</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+</schema>

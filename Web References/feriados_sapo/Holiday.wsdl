@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://services.sapo.pt/Metadata/Holiday" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://services.sapo.pt/Metadata/Holiday" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://services.sapo.pt/Metadata/Holiday">
+      <xsd:include schemaLocation="http://services.sapo.pt/Metadata/Contract/Holiday,Holiday.xsd" />
+      <xsd:element name="GetAllHolidays">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="year" type="xsd:int">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The year from which you want to retrieve the holidays</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O ano do qual quer obter os feriados.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetAllHolidaysResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="GetAllHolidaysResult" type="tns:ArrayOfHoliday">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">An array of Holiday.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">Um array de Holiday.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCarnival">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="year" type="xsd:int">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The year from which you want to retrieve the holiday.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O ano do qual quer obter o feriado.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCarnivalResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="GetCarnivalResult" type="tns:Holiday">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The holiday.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O feriado.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCorpusChristi">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="year" type="xsd:int">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The year from which you want to retrieve the holiday.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O ano do qual quer obter o feriado.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCorpusChristiResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="GetCorpusChristiResult" type="tns:Holiday">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The holiday.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O feriado.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetEaster">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="year" type="xsd:int">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The year from which you want to retrieve the holiday.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O ano do qual quer obter o feriado.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetEasterResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="GetEasterResult" type="tns:Holiday">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The holiday.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O feriado.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetGoodFriday">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="year" type="xsd:int">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The year from which you want to retrieve the holiday.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O ano do qual quer obter o feriado.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetGoodFridayResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="GetGoodFridayResult" type="tns:Holiday">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The holiday.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O feriado.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetHolidaysByMunicipalityId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="year" type="xsd:int">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The year from which you want to retrieve the holidays.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O ano do qual quer obter os feriados.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="1" maxOccurs="1" name="municipalityId" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The municipality identifier, according with SAPO GIS Service, from which you want to retrieve the holidays.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O identificador do município, de acordo com o serviço SAPO GIS, do qual pretende obter os feriados</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="1" name="includeNational" type="xsd:boolean">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The flag that indicates if you want to retrieve the national holidays also.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">Indica se deseja ou não que os feriados nacionais sejam incluídos.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetHolidaysByMunicipalityIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="GetHolidaysByMunicipalityIdResult" type="tns:ArrayOfHoliday">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">An array of Holiday.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">Um array de Holiday.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetLocalHolidays">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="year" type="xsd:int">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The year from which you want to retrieve the local holidays.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O ano do qual quer obter os feriados locais.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetLocalHolidaysResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="GetLocalHolidaysResult" type="tns:ArrayOfHoliday">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">An array of Holiday.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">Um array de Holiday.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetNationalHolidays">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="year" type="xsd:int">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The year from which you want to retrieve the national holidays.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O ano do qual quer obter os feriados nacionais.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetNationalHolidaysResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="GetNationalHolidaysResult" type="tns:ArrayOfHoliday">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">An array of Holiday.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">Um array de Holiday.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRegionalHolidays">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="year" type="xsd:int">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The year from which you want to retrieve the regional holidays.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">O ano do qual quer obter os feriados regionais.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRegionalHolidaysResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="GetRegionalHolidaysResult" type="tns:ArrayOfHoliday">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">An array of Holiday.</xsd:documentation>
+                <xsd:documentation xml:lang="pt">Um array de Holiday.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="GetAllHolidaysSoapIn">
+    <part name="parameters" element="tns:GetAllHolidays" />
+  </message>
+  <message name="GetAllHolidaysSoapOut">
+    <part name="parameters" element="tns:GetAllHolidaysResponse" />
+  </message>
+  <message name="GetAllHolidaysHttpGetIn">
+    <part name="parameters" element="tns:GetAllHolidays" />
+  </message>
+  <message name="GetAllHolidaysHttpGetOut">
+    <part name="parameters" element="tns:GetAllHolidaysResponse" />
+  </message>
+  <message name="GetAllHolidaysHttpPostIn">
+    <part name="parameters" element="tns:GetAllHolidays" />
+  </message>
+  <message name="GetAllHolidaysHttpPostOut">
+    <part name="parameters" element="tns:GetAllHolidaysResponse" />
+  </message>
+  <message name="GetCarnivalSoapIn">
+    <part name="parameters" element="tns:GetCarnival" />
+  </message>
+  <message name="GetCarnivalSoapOut">
+    <part name="parameters" element="tns:GetCarnivalResponse" />
+  </message>
+  <message name="GetCarnivalHttpGetIn">
+    <part name="parameters" element="tns:GetCarnival" />
+  </message>
+  <message name="GetCarnivalHttpGetOut">
+    <part name="parameters" element="tns:GetCarnivalResponse" />
+  </message>
+  <message name="GetCarnivalHttpPostIn">
+    <part name="parameters" element="tns:GetCarnival" />
+  </message>
+  <message name="GetCarnivalHttpPostOut">
+    <part name="parameters" element="tns:GetCarnivalResponse" />
+  </message>
+  <message name="GetCorpusChristiSoapIn">
+    <part name="parameters" element="tns:GetCorpusChristi" />
+  </message>
+  <message name="GetCorpusChristiSoapOut">
+    <part name="parameters" element="tns:GetCorpusChristiResponse" />
+  </message>
+  <message name="GetCorpusChristiHttpGetIn">
+    <part name="parameters" element="tns:GetCorpusChristi" />
+  </message>
+  <message name="GetCorpusChristiHttpGetOut">
+    <part name="parameters" element="tns:GetCorpusChristiResponse" />
+  </message>
+  <message name="GetCorpusChristiHttpPostIn">
+    <part name="parameters" element="tns:GetCorpusChristi" />
+  </message>
+  <message name="GetCorpusChristiHttpPostOut">
+    <part name="parameters" element="tns:GetCorpusChristiResponse" />
+  </message>
+  <message name="GetEasterSoapIn">
+    <part name="parameters" element="tns:GetEaster" />
+  </message>
+  <message name="GetEasterSoapOut">
+    <part name="parameters" element="tns:GetEasterResponse" />
+  </message>
+  <message name="GetEasterHttpGetIn">
+    <part name="parameters" element="tns:GetEaster" />
+  </message>
+  <message name="GetEasterHttpGetOut">
+    <part name="parameters" element="tns:GetEasterResponse" />
+  </message>
+  <message name="GetEasterHttpPostIn">
+    <part name="parameters" element="tns:GetEaster" />
+  </message>
+  <message name="GetEasterHttpPostOut">
+    <part name="parameters" element="tns:GetEasterResponse" />
+  </message>
+  <message name="GetGoodFridaySoapIn">
+    <part name="parameters" element="tns:GetGoodFriday" />
+  </message>
+  <message name="GetGoodFridaySoapOut">
+    <part name="parameters" element="tns:GetGoodFridayResponse" />
+  </message>
+  <message name="GetGoodFridayHttpGetIn">
+    <part name="parameters" element="tns:GetGoodFriday" />
+  </message>
+  <message name="GetGoodFridayHttpGetOut">
+    <part name="parameters" element="tns:GetGoodFridayResponse" />
+  </message>
+  <message name="GetGoodFridayHttpPostIn">
+    <part name="parameters" element="tns:GetGoodFriday" />
+  </message>
+  <message name="GetGoodFridayHttpPostOut">
+    <part name="parameters" element="tns:GetGoodFridayResponse" />
+  </message>
+  <message name="GetHolidaysByMunicipalityIdSoapIn">
+    <part name="parameters" element="tns:GetHolidaysByMunicipalityId" />
+  </message>
+  <message name="GetHolidaysByMunicipalityIdSoapOut">
+    <part name="parameters" element="tns:GetHolidaysByMunicipalityIdResponse" />
+  </message>
+  <message name="GetHolidaysByMunicipalityIdHttpGetIn">
+    <part name="parameters" element="tns:GetHolidaysByMunicipalityId" />
+  </message>
+  <message name="GetHolidaysByMunicipalityIdHttpGetOut">
+    <part name="parameters" element="tns:GetHolidaysByMunicipalityIdResponse" />
+  </message>
+  <message name="GetHolidaysByMunicipalityIdHttpPostIn">
+    <part name="parameters" element="tns:GetHolidaysByMunicipalityId" />
+  </message>
+  <message name="GetHolidaysByMunicipalityIdHttpPostOut">
+    <part name="parameters" element="tns:GetHolidaysByMunicipalityIdResponse" />
+  </message>
+  <message name="GetLocalHolidaysSoapIn">
+    <part name="parameters" element="tns:GetLocalHolidays" />
+  </message>
+  <message name="GetLocalHolidaysSoapOut">
+    <part name="parameters" element="tns:GetLocalHolidaysResponse" />
+  </message>
+  <message name="GetLocalHolidaysHttpGetIn">
+    <part name="parameters" element="tns:GetLocalHolidays" />
+  </message>
+  <message name="GetLocalHolidaysHttpGetOut">
+    <part name="parameters" element="tns:GetLocalHolidaysResponse" />
+  </message>
+  <message name="GetLocalHolidaysHttpPostIn">
+    <part name="parameters" element="tns:GetLocalHolidays" />
+  </message>
+  <message name="GetLocalHolidaysHttpPostOut">
+    <part name="parameters" element="tns:GetLocalHolidaysResponse" />
+  </message>
+  <message name="GetNationalHolidaysSoapIn">
+    <part name="parameters" element="tns:GetNationalHolidays" />
+  </message>
+  <message name="GetNationalHolidaysSoapOut">
+    <part name="parameters" element="tns:GetNationalHolidaysResponse" />
+  </message>
+  <message name="GetNationalHolidaysHttpGetIn">
+    <part name="parameters" element="tns:GetNationalHolidays" />
+  </message>
+  <message name="GetNationalHolidaysHttpGetOut">
+    <part name="parameters" element="tns:GetNationalHolidaysResponse" />
+  </message>
+  <message name="GetNationalHolidaysHttpPostIn">
+    <part name="parameters" element="tns:GetNationalHolidays" />
+  </message>
+  <message name="GetNationalHolidaysHttpPostOut">
+    <part name="parameters" element="tns:GetNationalHolidaysResponse" />
+  </message>
+  <message name="GetRegionalHolidaysSoapIn">
+    <part name="parameters" element="tns:GetRegionalHolidays" />
+  </message>
+  <message name="GetRegionalHolidaysSoapOut">
+    <part name="parameters" element="tns:GetRegionalHolidaysResponse" />
+  </message>
+  <message name="GetRegionalHolidaysHttpGetIn">
+    <part name="parameters" element="tns:GetRegionalHolidays" />
+  </message>
+  <message name="GetRegionalHolidaysHttpGetOut">
+    <part name="parameters" element="tns:GetRegionalHolidaysResponse" />
+  </message>
+  <message name="GetRegionalHolidaysHttpPostIn">
+    <part name="parameters" element="tns:GetRegionalHolidays" />
+  </message>
+  <message name="GetRegionalHolidaysHttpPostOut">
+    <part name="parameters" element="tns:GetRegionalHolidaysResponse" />
+  </message>
+  <portType name="HolidaySoap">
+    <operation name="GetAllHolidays">
+      <documentation>Devolve uma lista com todos os feriados (nacionais, regionais e municipais) para um determinado ano.</documentation>
+      <input message="tns:GetAllHolidaysSoapIn" />
+      <output message="tns:GetAllHolidaysSoapOut" />
+    </operation>
+    <operation name="GetCarnival">
+      <documentation>Devolve a data do Carnaval para um determinado ano</documentation>
+      <input message="tns:GetCarnivalSoapIn" />
+      <output message="tns:GetCarnivalSoapOut" />
+    </operation>
+    <operation name="GetCorpusChristi">
+      <documentation>Devolve a data do Dia de Corpo de Deus para um determinado ano</documentation>
+      <input message="tns:GetCorpusChristiSoapIn" />
+      <output message="tns:GetCorpusChristiSoapOut" />
+    </operation>
+    <operation name="GetEaster">
+      <documentation>Devolve a data da Páscoa para um determinado ano</documentation>
+      <input message="tns:GetEasterSoapIn" />
+      <output message="tns:GetEasterSoapOut" />
+    </operation>
+    <operation name="GetGoodFriday">
+      <documentation>Devolve a data da Sexta-Feira Santa para um determinado ano</documentation>
+      <input message="tns:GetGoodFridaySoapIn" />
+      <output message="tns:GetGoodFridaySoapOut" />
+    </operation>
+    <operation name="GetHolidaysByMunicipalityId">
+      <documentation>Devolve a lista de feriados para um determinado ano e código de município e opcionalmente inclui os feriados nacionais nos resultados</documentation>
+      <input message="tns:GetHolidaysByMunicipalityIdSoapIn" />
+      <output message="tns:GetHolidaysByMunicipalityIdSoapOut" />
+    </operation>
+    <operation name="GetLocalHolidays">
+      <documentation>Devolve a lista de feriados municipais para um determinado ano</documentation>
+      <input message="tns:GetLocalHolidaysSoapIn" />
+      <output message="tns:GetLocalHolidaysSoapOut" />
+    </operation>
+    <operation name="GetNationalHolidays">
+      <documentation>Devolve todos os feriados nacionais para um determinado ano.</documentation>
+      <input message="tns:GetNationalHolidaysSoapIn" />
+      <output message="tns:GetNationalHolidaysSoapOut" />
+    </operation>
+    <operation name="GetRegionalHolidays">
+      <documentation>Devolve a lista de feriados regionais para um determinado ano</documentation>
+      <input message="tns:GetRegionalHolidaysSoapIn" />
+      <output message="tns:GetRegionalHolidaysSoapOut" />
+    </operation>
+  </portType>
+  <portType name="HolidaySoapSecure">
+    <operation name="GetAllHolidays">
+      <documentation>Devolve uma lista com todos os feriados (nacionais, regionais e municipais) para um determinado ano.</documentation>
+      <input message="tns:GetAllHolidaysSoapIn" />
+      <output message="tns:GetAllHolidaysSoapOut" />
+    </operation>
+  </portType>
+  <portType name="HolidayHttpGet">
+    <operation name="GetAllHolidays">
+      <documentation>Devolve uma lista com todos os feriados (nacionais, regionais e municipais) para um determinado ano.</documentation>
+      <input message="tns:GetAllHolidaysHttpGetIn" />
+      <output message="tns:GetAllHolidaysHttpGetOut" />
+    </operation>
+    <operation name="GetCarnival">
+      <documentation>Devolve a data do Carnaval para um determinado ano</documentation>
+      <input message="tns:GetCarnivalHttpGetIn" />
+      <output message="tns:GetCarnivalHttpGetOut" />
+    </operation>
+    <operation name="GetCorpusChristi">
+      <documentation>Devolve a data do Dia de Corpo de Deus para um determinado ano</documentation>
+      <input message="tns:GetCorpusChristiHttpGetIn" />
+      <output message="tns:GetCorpusChristiHttpGetOut" />
+    </operation>
+    <operation name="GetEaster">
+      <documentation>Devolve a data da Páscoa para um determinado ano</documentation>
+      <input message="tns:GetEasterHttpGetIn" />
+      <output message="tns:GetEasterHttpGetOut" />
+    </operation>
+    <operation name="GetGoodFriday">
+      <documentation>Devolve a data da Sexta-Feira Santa para um determinado ano</documentation>
+      <input message="tns:GetGoodFridayHttpGetIn" />
+      <output message="tns:GetGoodFridayHttpGetOut" />
+    </operation>
+    <operation name="GetHolidaysByMunicipalityId">
+      <documentation>Devolve a lista de feriados para um determinado ano e código de município e opcionalmente inclui os feriados nacionais nos resultados</documentation>
+      <input message="tns:GetHolidaysByMunicipalityIdHttpGetIn" />
+      <output message="tns:GetHolidaysByMunicipalityIdHttpGetOut" />
+    </operation>
+    <operation name="GetLocalHolidays">
+      <documentation>Devolve a lista de feriados municipais para um determinado ano</documentation>
+      <input message="tns:GetLocalHolidaysHttpGetIn" />
+      <output message="tns:GetLocalHolidaysHttpGetOut" />
+    </operation>
+    <operation name="GetNationalHolidays">
+      <documentation>Devolve todos os feriados nacionais para um determinado ano.</documentation>
+      <input message="tns:GetNationalHolidaysHttpGetIn" />
+      <output message="tns:GetNationalHolidaysHttpGetOut" />
+    </operation>
+    <operation name="GetRegionalHolidays">
+      <documentation>Devolve a lista de feriados regionais para um determinado ano</documentation>
+      <input message="tns:GetRegionalHolidaysHttpGetIn" />
+      <output message="tns:GetRegionalHolidaysHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="HolidayHttpGetSecure">
+    <operation name="GetAllHolidays">
+      <documentation>Devolve uma lista com todos os feriados (nacionais, regionais e municipais) para um determinado ano.</documentation>
+      <input message="tns:GetAllHolidaysHttpGetIn" />
+      <output message="tns:GetAllHolidaysHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="HolidayHttpPost">
+    <operation name="GetAllHolidays">
+      <documentation>Devolve uma lista com todos os feriados (nacionais, regionais e municipais) para um determinado ano.</documentation>
+      <input message="tns:GetAllHolidaysHttpPostIn" />
+      <output message="tns:GetAllHolidaysHttpPostOut" />
+    </operation>
+    <operation name="GetCarnival">
+      <documentation>Devolve a data do Carnaval para um determinado ano</documentation>
+      <input message="tns:GetCarnivalHttpPostIn" />
+      <output message="tns:GetCarnivalHttpPostOut" />
+    </operation>
+    <operation name="GetCorpusChristi">
+      <documentation>Devolve a data do Dia de Corpo de Deus para um determinado ano</documentation>
+      <input message="tns:GetCorpusChristiHttpPostIn" />
+      <output message="tns:GetCorpusChristiHttpPostOut" />
+    </operation>
+    <operation name="GetEaster">
+      <documentation>Devolve a data da Páscoa para um determinado ano</documentation>
+      <input message="tns:GetEasterHttpPostIn" />
+      <output message="tns:GetEasterHttpPostOut" />
+    </operation>
+    <operation name="GetGoodFriday">
+      <documentation>Devolve a data da Sexta-Feira Santa para um determinado ano</documentation>
+      <input message="tns:GetGoodFridayHttpPostIn" />
+      <output message="tns:GetGoodFridayHttpPostOut" />
+    </operation>
+    <operation name="GetHolidaysByMunicipalityId">
+      <documentation>Devolve a lista de feriados para um determinado ano e código de município e opcionalmente inclui os feriados nacionais nos resultados</documentation>
+      <input message="tns:GetHolidaysByMunicipalityIdHttpPostIn" />
+      <output message="tns:GetHolidaysByMunicipalityIdHttpPostOut" />
+    </operation>
+    <operation name="GetLocalHolidays">
+      <documentation>Devolve a lista de feriados municipais para um determinado ano</documentation>
+      <input message="tns:GetLocalHolidaysHttpPostIn" />
+      <output message="tns:GetLocalHolidaysHttpPostOut" />
+    </operation>
+    <operation name="GetNationalHolidays">
+      <documentation>Devolve todos os feriados nacionais para um determinado ano.</documentation>
+      <input message="tns:GetNationalHolidaysHttpPostIn" />
+      <output message="tns:GetNationalHolidaysHttpPostOut" />
+    </operation>
+    <operation name="GetRegionalHolidays">
+      <documentation>Devolve a lista de feriados regionais para um determinado ano</documentation>
+      <input message="tns:GetRegionalHolidaysHttpPostIn" />
+      <output message="tns:GetRegionalHolidaysHttpPostOut" />
+    </operation>
+  </portType>
+  <portType name="HolidayHttpPostSecure">
+    <operation name="GetAllHolidays">
+      <documentation>Devolve uma lista com todos os feriados (nacionais, regionais e municipais) para um determinado ano.</documentation>
+      <input message="tns:GetAllHolidaysHttpPostIn" />
+      <output message="tns:GetAllHolidaysHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="HolidaySoap" type="tns:HolidaySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetAllHolidays">
+      <soap:operation soapAction="http://services.sapo.pt/Metadata/Holiday/GetAllHolidays" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCarnival">
+      <soap:operation soapAction="http://services.sapo.pt/Metadata/Holiday/GetCarnival" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCorpusChristi">
+      <soap:operation soapAction="http://services.sapo.pt/Metadata/Holiday/GetCorpusChristi" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetEaster">
+      <soap:operation soapAction="http://services.sapo.pt/Metadata/Holiday/GetEaster" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetGoodFriday">
+      <soap:operation soapAction="http://services.sapo.pt/Metadata/Holiday/GetGoodFriday" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetHolidaysByMunicipalityId">
+      <soap:operation soapAction="http://services.sapo.pt/Metadata/Holiday/GetHolidaysByMunicipalityId" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetLocalHolidays">
+      <soap:operation soapAction="http://services.sapo.pt/Metadata/Holiday/GetLocalHolidays" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetNationalHolidays">
+      <soap:operation soapAction="http://services.sapo.pt/Metadata/Holiday/GetNationalHolidays" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRegionalHolidays">
+      <soap:operation soapAction="http://services.sapo.pt/Metadata/Holiday/GetRegionalHolidays" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="HolidaySoapSecure" type="tns:HolidaySoapSecure">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetAllHolidays">
+      <soap:operation soapAction="http://services.sapo.pt/Metadata/Holiday/GetAllHolidays" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="HolidayHttpGet" type="tns:HolidayHttpGet">
+    <http:binding verb="GET" />
+    <operation name="GetAllHolidays">
+      <http:operation location="/GetAllHolidays" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCarnival">
+      <http:operation location="/GetCarnival" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCorpusChristi">
+      <http:operation location="/GetCorpusChristi" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetEaster">
+      <http:operation location="/GetEaster" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetGoodFriday">
+      <http:operation location="/GetGoodFriday" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetHolidaysByMunicipalityId">
+      <http:operation location="/GetHolidaysByMunicipalityId" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetLocalHolidays">
+      <http:operation location="/GetLocalHolidays" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetNationalHolidays">
+      <http:operation location="/GetNationalHolidays" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetRegionalHolidays">
+      <http:operation location="/GetRegionalHolidays" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="HolidayHttpGetSecure" type="tns:HolidayHttpGetSecure">
+    <http:binding verb="GET" />
+    <operation name="GetAllHolidays">
+      <http:operation location="/GetAllHolidays" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="HolidayHttpPost" type="tns:HolidayHttpPost">
+    <http:binding verb="POST" />
+    <operation name="GetAllHolidays">
+      <http:operation location="/GetAllHolidays" />
+      <input>
+        <mime:content part="Body" type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCarnival">
+      <http:operation location="/GetCarnival" />
+      <input>
+        <mime:content part="Body" type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCorpusChristi">
+      <http:operation location="/GetCorpusChristi" />
+      <input>
+        <mime:content part="Body" type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetEaster">
+      <http:operation location="/GetEaster" />
+      <input>
+        <mime:content part="Body" type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetGoodFriday">
+      <http:operation location="/GetGoodFriday" />
+      <input>
+        <mime:content part="Body" type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetHolidaysByMunicipalityId">
+      <http:operation location="/GetHolidaysByMunicipalityId" />
+      <input>
+        <mime:content part="Body" type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetLocalHolidays">
+      <http:operation location="/GetLocalHolidays" />
+      <input>
+        <mime:content part="Body" type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetNationalHolidays">
+      <http:operation location="/GetNationalHolidays" />
+      <input>
+        <mime:content part="Body" type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetRegionalHolidays">
+      <http:operation location="/GetRegionalHolidays" />
+      <input>
+        <mime:content part="Body" type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="HolidayHttpPostSecure" type="tns:HolidayHttpPostSecure">
+    <http:binding verb="POST" />
+    <operation name="GetAllHolidays">
+      <http:operation location="/GetAllHolidays" />
+      <input>
+        <mime:content part="Body" type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Holiday">
+    <documentation>Devolve uma lista de feriados nacionais, regionais e municipais para um determinado ano. Suporta o cálculo dos feriados para os anos entre 1582 e 2299.</documentation>
+    <port name="HolidaySoap" binding="tns:HolidaySoap">
+      <soap:address location="http://services.sapo.pt/Holiday" />
+    </port>
+    <port name="HolidaySoapSecure" binding="tns:HolidaySoapSecure">
+      <soap:address location="https://services.sapo.pt/Holiday" />
+    </port>
+    <port name="HolidayHttpGet" binding="tns:HolidayHttpGet">
+      <http:address location="http://services.sapo.pt/Holiday" />
+    </port>
+    <port name="HolidayHttpGetSecure" binding="tns:HolidayHttpGetSecure">
+      <http:address location="https://services.sapo.pt/Holiday" />
+    </port>
+    <port name="HolidayHttpPost" binding="tns:HolidayHttpPost">
+      <http:address location="http://services.sapo.pt/Holiday" />
+    </port>
+    <port name="HolidayHttpPostSecure" binding="tns:HolidayHttpPostSecure">
+      <http:address location="https://services.sapo.pt/Holiday" />
+    </port>
+  </service>
+</definitions>
